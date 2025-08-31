@@ -1,0 +1,107 @@
+.customer-list-container {
+  margin-bottom: 30px;
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.customer-table th {
+  background-color: #f8f9fa;
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.customer-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.customer-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.customer-name-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.customer-name-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.loading {
+  color: #666;
+  font-size: 16px;
+}
+
+.no-customers {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-customers p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .customer-table th,
+  .customer-table td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .customer-table th,
+  .customer-table td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+
+  .customer-table th:nth-child(4),
+  .customer-table td:nth-child(4) {
+    display: none; /* Hide Created column on very small screens */
+  }
+}

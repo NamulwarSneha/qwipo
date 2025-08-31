@@ -1,70 +1,191 @@
-# Getting Started with Create React App
+# Qwipo Customer Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for managing customer and address information, built with React.js, Node.js, Express.js, and SQLite.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### Customer Management
+- **Create**: Add new customers with validation
+- **Read**: View customer list with search, filtering, and pagination
+- **Update**: Edit customer information
+- **Delete**: Remove customer records with confirmation
 
-### `npm start`
+### Address Management
+- **Multiple Addresses**: Support for multiple addresses per customer
+- **CRUD Operations**: Full address management capabilities
+- **Location Filtering**: Search by city, state, or pin code
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Advanced Features
+- **Search & Filtering**: Search customers by name, phone, or location
+- **Pagination**: Navigate through large datasets
+- **Sorting**: Sort data by various fields
+- **Responsive Design**: Mobile-friendly interface
+- **Error Handling**: Comprehensive error management and logging
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web application framework
+- **SQLite** - Lightweight database
+- **CORS** - Cross-origin resource sharing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- **React.js** - User interface library
+- **React Router** - Client-side routing
+- **Axios** - HTTP client for API calls
+- **CSS3** - Styling and responsive design
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+Qwipo/
+├── backend/                 # Node.js/Express backend
+│   ├── index.js            # Main server file
+│   ├── package.json        # Backend dependencies
+│   └── README.md           # Backend documentation
+├── frontend/               # React.js frontend
+│   ├── src/
+│   │   ├── pages/         # Page components
+│   │   ├── components/    # Reusable components
+│   │   └── App.js         # Main application component
+│   ├── package.json       # Frontend dependencies
+│   └── README.md          # Frontend documentation
+├── .gitignore             # Git ignore rules
+└── README.md              # This file
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Quick Start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm run eject`
+### Backend Setup
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   The backend will run on `http://localhost:5000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend Setup
+1. Open a new terminal and navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
 
-## Learn More
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   The frontend will run on `http://localhost:3000`
 
-### Code Splitting
+## 📚 API Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Base URL
+```
+http://localhost:5000/api
+```
 
-### Analyzing the Bundle Size
+### Customer Endpoints
+- `POST /customers` - Create customer
+- `GET /customers` - List customers (with pagination, search, filtering)
+- `GET /customers/:id` - Get customer by ID
+- `PUT /customers/:id` - Update customer
+- `DELETE /customers/:id` - Delete customer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Address Endpoints
+- `POST /customers/:id/addresses` - Add address to customer
+- `GET /customers/:id/addresses` - Get customer addresses
+- `PUT /addresses/:addressId` - Update address
+- `DELETE /addresses/:addressId` - Delete address
 
-### Making a Progressive Web App
+### Special Endpoints
+- `GET /customers-with-multiple-addresses` - Customers with multiple addresses
+- `GET /customers-single-address` - Customers with single address
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🎯 Assignment Requirements Met
 
-### Advanced Configuration
+### Mobile CRUD Operations ✅
+- [x] Create New Customer with validation
+- [x] Read Existing Customer Details
+- [x] Update Customer Information
+- [x] Delete Customer Record
+- [x] View Multiple Addresses
+- [x] Save Updated Multiple Address
+- [x] Mark Customer as Having Only One Address
+- [x] Search by City, State, or Pincode
+- [x] Clear Filters
+- [x] Page Navigation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Web CRUD Operations ✅
+- [x] Create New Customer with form validation
+- [x] Read Existing Customer Data
+- [x] Update Customer Information
+- [x] Delete Customer Record
+- [x] View Available Multiple Addresses
+- [x] Save Updated Multiple Address
+- [x] Mark Customer as Having Only One Address
+- [x] Search by City, State, or PIN
+- [x] Clear Filters
+- [x] Page Navigation
+- [x] Responsive Design
 
-### Deployment
+### Additional Features ✅
+- [x] Error Handling & Logging System
+- [x] Input Validation (Client & Server-side)
+- [x] Database Management
+- [x] API Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔧 Development
 
-### `npm run build` fails to minify
+### Database
+The SQLite database is automatically created when the backend starts. Tables are created with proper relationships and constraints.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Adding New Features
+1. Backend: Add new routes in `backend/index.js`
+2. Frontend: Create new components in `frontend/src/components/`
+3. Update routing in `frontend/src/App.js`
+
+### Testing
+- Backend: Test API endpoints using tools like Postman
+- Frontend: Test UI components manually
+- Database: Verify data integrity and relationships
+
+## 📱 Responsive Design
+
+The application is designed to work seamlessly across all device sizes:
+- **Desktop**: Full-featured interface with advanced controls
+- **Tablet**: Optimized layout for medium screens
+- **Mobile**: Touch-friendly interface with simplified navigation
+
+## 🚨 Error Handling
+
+- **Client-side**: Form validation and user feedback
+- **Server-side**: Input validation and database error handling
+- **API**: Proper HTTP status codes and error messages
+- **Logging**: Comprehensive error logging for debugging
+
+## 📝 License
+
+This project is created for the Qwipo assignment demonstration.
+
+
+**Note**: This is a demonstration project showcasing full-stack development skills with React.js, Node.js, Express.js, and SQLite. All CRUD operations, search functionality, and responsive design requirements have been implemented according to the assignment specifications.
